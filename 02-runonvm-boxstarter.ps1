@@ -1,1 +1,1 @@
-Install-BoxstarterPackage -PackageName C:\WindowsServerTemplateInstall\WindowsServerTemplateBoxstarter.ps1
+Install-BoxstarterPackage -PackageName C:\Temp\WindowsServerTemplateInstall\WindowsServerTemplateBoxstarter.ps1
