@@ -1,4 +1,4 @@
-#
+<#
 .SYNOPSIS
     Boxstart script for Windows Server Template installation
 
