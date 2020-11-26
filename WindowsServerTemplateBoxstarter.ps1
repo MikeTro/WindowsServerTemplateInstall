@@ -59,6 +59,7 @@ Invoke-Expression "$cup sysinternals"
 Invoke-Expression "$cup windirstat"
 Invoke-Expression "$cup microsoft-windows-terminal"
 Invoke-Expression "$cup vscode"
+Invoke-Expression "$cup notepadplusplus.install"
 Invoke-Expression "$cup windows-admin-center"
 
 #---------------------------------------------------------------------------------------------------------------------------
@@ -76,7 +77,7 @@ del C:\eula*.txt
 del C:\install.*
 del C:\vcredist.*
 del C:\vc_red.*
-
+del $ChocoCachePath
 #---------------------------------------------------------------------------------------------------------------------------
 # windows configuration ####
 #---------------------------------------------------------------------------------------------------------------------------
