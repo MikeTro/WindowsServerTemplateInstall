@@ -49,6 +49,7 @@ Disable-UAC
 #---------------------------------------------------------------------------------------------------------------------------
 # app installation
 #---------------------------------------------------------------------------------------------------------------------------
+Invoke-Expression "$cup virtio-drivers"
 Invoke-Expression "$cup ultradefrag"
 Invoke-Expression "$cup sdelete"
 Invoke-Expression "$cup googlechrome"
