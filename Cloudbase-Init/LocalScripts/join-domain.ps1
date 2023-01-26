@@ -9,6 +9,7 @@ $DomainName = $cfg.$root.DomainName
 $DomJoinUser = $cfg.$root.DomJoinUser
 $DomJoinPassword = $cfg.$root.DomJoinPassword
 $DomainController = $cfg.$root.DomainController
+$DNSServer = $cfg.$root.DNSServer
 
 
 
@@ -22,6 +23,11 @@ try {
 	
 	# CredSSP for ansible
 	Enable-WSManCredSSP -Role Server -Force
+	
+		
+	$InterfaceIndex = $(Get-NetAdapter | Select-Object InterfaceIndex).InterfaceIndex
+	Set-DnsClientServerAddress -InterfaceIndex $InterfaceIndex -ServerAddresses ("192.168.1.51")
+	
 
 	# Join Domain
 	$domainJoinCreds = New-Object System.Management.Automation.PSCredential $DomJoinUser,(ConvertTo-SecureString -String $DomJoinPassword -AsPlainText -Force)
