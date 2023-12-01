@@ -58,10 +58,8 @@ Invoke-Expression "$cup sysinternals"
 ## NOTE: by default, installs to C:\tools\sysinternals
 
 Invoke-Expression "$cup windirstat"
-Invoke-Expression "$cup microsoft-windows-terminal"
-Invoke-Expression "$cup vscode"
 Invoke-Expression "$cup notepadplusplus.install"
-Invoke-Expression "$cup windows-admin-center"
+
 
 #---------------------------------------------------------------------------------------------------------------------------
 # Get windows updates 
