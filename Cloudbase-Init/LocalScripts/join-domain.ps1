@@ -26,7 +26,6 @@ try {
 	
 		
 	$InterfaceIndex = $(Get-NetAdapter | Select-Object InterfaceIndex).InterfaceIndex
-	Set-DnsClientServerAddress -InterfaceIndex $InterfaceIndex -ServerAddresses ("192.168.1.51")
 	
 
 	# Join Domain
