@@ -1,5 +1,5 @@
 # Domain Join Fix (KB5020276—Netjoin: Domain join hardening changes)
-New-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\ -Name NetJoinLegacyAccountReuse -PropertyType DWORD -Value 1
+# New-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\ -Name NetJoinLegacyAccountReuse -PropertyType DWORD -Value 1
 
 # config cloudbaseinit
 choco install cloudbaseinit -y

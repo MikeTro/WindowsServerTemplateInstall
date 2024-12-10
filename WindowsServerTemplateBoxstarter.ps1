@@ -49,8 +49,8 @@ Disable-UAC
 #---------------------------------------------------------------------------------------------------------------------------
 # app installation
 #---------------------------------------------------------------------------------------------------------------------------
-Invoke-Expression "$cup virtio-drivers"
-Invoke-Expression "$cup qemu-guest-agent"
+<# Invoke-Expression "$cup virtio-drivers" outdated does not work on server 2022#>
+Invoke-Expression "$cup qemu-guest-agent" <# does not install the guest agent, only the drivers!?! #>
 Invoke-Expression "$cup ultradefrag"
 Invoke-Expression "$cup sdelete"
 Invoke-Expression "$cup googlechrome"

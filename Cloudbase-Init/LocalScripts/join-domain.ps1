@@ -58,8 +58,8 @@ try {
 	# Join Domain
 	Write-Log -LogFile $LogFile -LogString "Join Domain"
 	$domainJoinCreds = New-Object System.Management.Automation.PSCredential $DomJoinUser,(ConvertTo-SecureString -String $DomJoinPassword -AsPlainText -Force)
-	Add-Computer -DomainName $DomainName -Credential $domainJoinCreds -Server $DomainController -Restart:$false -Force
-	Remove-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\ -Name NetJoinLegacyAccountReuse
+	Add-Computer -DomainName $DomainName -Credential $domainJoinCreds <# -Server $DomainController #> -Restart:$false -Force
+	# Remove-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\ -Name NetJoinLegacyAccountReuse
 	Write-Log -LogFile $LogFile -LogString "Exit 1001"
 	exit 1001
 }
